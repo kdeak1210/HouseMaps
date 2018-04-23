@@ -14,3 +14,8 @@
 
 * Emulator needs to be running before building Android, else process errors out
 
+8. Remote Debugging won't connect, this fix works
+  - https://stackoverflow.com/questions/40898934/unable-to-connect-with-remote-debugger
+  - To solve the issue: Before enabling remote debugging on your 
+    emulator, open http://localhost:8081/debugger-ui
+    

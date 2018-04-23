@@ -1,0 +1,36 @@
+To use some of the WEB APIs that React Native offers, we need to 
+add stuff to Android config files.
+
+Re-run npm/yarn run android after any config file changes to take effect.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+GEOLOCATION: https://facebook.github.io/react-native/docs/geolocation.html#content
+  - getCurrentPosition()
+  - requestAuthorization()
+
+In android/app/src/AndroidManifest.xml
+  - add: <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+** This is a 'dangerous permission' in Android API 25+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+PERMISSIONS:
+  - I am developing w/ API 25, and need to use PermissionsAndroid to 
+    prompt the user for dangerous permissions.
+  
+  PROBLEM: My Emulator was not displaying the prompt, heres the fix:
+  - CRNA ---> Eject config'd android sdk w/ older version
+  - See Inside: android/app/build.gradle:
+    --  compileSdkVersion 23
+    --  buildToolsVersion "23.0.1"
+    --  targetSdkVersion 22
+    
+  FIX: Change compile/target versions to 25, and build tools to "25.0.0"
+    to match my Android API 25 version for the emulator. Rebuild project.
+
+** After these changes & running the example code from RN docs, permissions work
+  as expected: https://facebook.github.io/react-native/docs/permissionsandroid.html
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
