@@ -1,0 +1,14 @@
+1. $ create-react-native-app HouseMaps/
+2. $ cd HouseMaps/
+3. $ npm run eject
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+4. $ emulator -avd Nexus_5x_API_25  *
+5. $ yarn run android               *
+6. Enable Live (or Hot) Reload -> In emulator, CTRL + M, choose live reload
+
+* Emulator needs to be running before building Android, else process errors out
+
+7. Prettier/Linting
+  - $ yarn add -D babel-eslint eslint eslint-config-airbnb eslint-config-prettier eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-prettier eslint-plugin-react prettier
