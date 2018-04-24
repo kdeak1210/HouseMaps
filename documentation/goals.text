@@ -1,0 +1,14 @@
+1. User shouldn't need to login, but SHOULD have data persisted
+  - Look into AsyncStorage / redux-persist
+  - At the least, store a list of favorited available houses / listings
+
+2. Maybe use user's location permissions to find houses,
+  but definitely support zip code search later
+
+3. Map integration using react-native-maps
+  - DO display relevant markers w/in a specified search area / params
+  - MAYBE provide feature to 'draw' a custom search area, rather than only
+    predefined borders like a zipCode or the map's current view area
+
+4. Use react-navigation with a 'Tab Navigation' style to switch b/w screens
+  - Either have the tab navbar at top or bottom of all (main?) screens

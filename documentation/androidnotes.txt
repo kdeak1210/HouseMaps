@@ -34,3 +34,9 @@ PERMISSIONS:
   as expected: https://facebook.github.io/react-native/docs/permissionsandroid.html
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+MAP:
+  - react-native-maps
+  - Android manual install (no link) https://github.com/react-community/react-native-maps/blob/master/docs/installation.md#android
+
+* Make sure the project is using Gradle 3: https://github.com/react-community/react-native-maps/issues/2211

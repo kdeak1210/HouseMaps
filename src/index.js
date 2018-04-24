@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { StyleSheet, View, PermissionsAndroid } from 'react-native';
 
 import FetchLocation from './components/FetchLocation';
+import UsersMap from './components/UsersMap';
 
 const styles = StyleSheet.create({
   container: {
@@ -42,6 +43,7 @@ export default class App extends Component {
     return (
       <View style={styles.container}>
         <FetchLocation onGetLocation={this.getUserLocationHandler} />
+        <UsersMap />
       </View>
     );
   }
